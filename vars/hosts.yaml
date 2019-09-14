@@ -1,0 +1,4 @@
+all:
+    hosts:
+        apic:
+           ansible_host: 10.0.244.4

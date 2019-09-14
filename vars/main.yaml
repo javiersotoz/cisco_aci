@@ -1,0 +1,7 @@
+# tasks file for cisco_aci
+#
+- name: include devices vars
+  include_tasks: vars/hosts.yaml
+
+- name: include configuration vars
+  include_tasks: vars/config.yaml
