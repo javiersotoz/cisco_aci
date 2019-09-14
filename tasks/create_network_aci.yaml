@@ -66,8 +66,8 @@
       tenant: "{{ tenant_name }}"
       ap: "{{ app_profile_name }}"
       epg: "{{ epg_name }}"
-      domain: "{{domain_name}}"
-      domain_type: "{{domain_type}}"
+      domain: "{{ domain_name }}"
+      domain_type: "{{ domain_type }}"
       state: present
       hostname: "{{ inventory_hostname }}"
       username: "{{ user }}"
