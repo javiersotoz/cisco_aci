@@ -1,6 +1,6 @@
 ---
 # vars file for config parameters
-
+#
 # vars for config 
 tenant_name: javier
 vrf_name: javier-vrf
@@ -11,16 +11,15 @@ app_profile_name: javier-ap
 epg_name: javier-epg
 domain: Domain-for-static
 domain_type: phys
-
+#
 # vars for config static_binding_path
 vlan_id: xxxxxx
 interface_mode: xxxxxx
 pod_id: xxxxxx
 leaf: xxxxxx
 interface: xxxxxx
-
+#
 #vars for connection
 use_ssl: yes
 validate_certs: no
 state: present
-
