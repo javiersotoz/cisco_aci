@@ -5,24 +5,24 @@
   aci_vrf:
     vrf: "{{ vrf_name }}"
     tenant: "{{ tenant_name }}"
-    state: present
+    state: "{{ state }}"
     hostname: "{{ inventory_hostname }}"
     username: "{{ user }}"
     password: "{{ pass }}"
-    use_ssl: yes
-    validate_certs: false
+    use_ssl: "{{ use_ssl }}"
+    validate_certs: "{{ validate_certs }}"
 
 - name: CREATE ACI TENANT BD
   aci_bd:
     tenant: "{{ tenant_name }}"
     bd: "{{ bd_name }}"
     vrf: "{{ vrf_name }}"
-    state: present
+    state: "{{ state }}"
     host: "{{ inventory_hostname }}"
     username: "{{ user }}"
     password: "{{ pass }}"
-    use_ssl: yes
-    validate_certs: false
+    use_ssl: "{{ use_ssl }}"
+    validate_certs: "{{ validate_certs }}"
 
 - name: CREATE ACI TENANT BD SUBNET
   aci_bd_subnet:
@@ -30,23 +30,23 @@
     bd: "{{ bd_name }}"
     gateway: "{{ gateway_ip }}"
     mask: "{{ subnet_mask }}"
-    state: present
+    state: "{{ state }}"
     host: "{{ inventory_hostname }}"
     username: "{{ user }}"
     password: "{{ pass }}"
-    use_ssl: yes
-    validate_certs: false
+    use_ssl: "{{ use_ssl }}"
+    validate_certs: "{{ validate_certs }}"
 
 - name: CREATE ACI TENANT APP PROFILE
   aci_ap:
     ap: "{{ app_profile_name }}"
     tenant: "{{ tenant_name }}"
-    state: present
+    state: "{{ state }}"
     hostname: "{{ inventory_hostname }}"
     username: "{{ user }}"
     password: "{{ pass }}"
-    use_ssl: yes
-    validate_certs: false
+    use_ssl: "{{ use_ssl }}"
+    validate_certs: "{{ validate_certs }}"
 
 - name: CREATE ACI TENANT APP PROFILE EPG
   aci_epg:
@@ -54,12 +54,12 @@
     ap: "{{ app_profile_name }}"
     tenant: "{{ tenant_name }}"
     bd: "{{ bd_name }}"
-    state: present
+    state: "{{ state }}"
     hostname: "{{ inventory_hostname }}"
     username: "{{ user }}"
     password: "{{ pass }}"
-    use_ssl: yes
-    validate_certs: false
+    use_ssl: "{{ use_ssl }}"
+    validate_certs: "{{ validate_certs }}"
 
 - name: CREATE ACI TENANT APP PROFILE EPG DOMAIN
     aci_epg_to_domain:
@@ -68,9 +68,9 @@
       epg: "{{ epg_name }}"
       domain: "{{ domain_name }}"
       domain_type: "{{ domain_type }}"
-      state: present
+      state: "{{ state }}"
       hostname: "{{ inventory_hostname }}"
       username: "{{ user }}"
       password: "{{ pass }}"
-      use_ssl: yes
-      validate_certs: false
+      use_ssl: "{{ use_ssl }}"
+      validate_certs: "{{ validate_certs }}"
