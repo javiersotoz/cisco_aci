@@ -1,0 +1,76 @@
+---
+# tasks file for apiclab01- name: CREATE ACI TENANT VRF
+
+- name: CREATE ACI TENANT VRF
+  aci_vrf:
+    vrf: "{{ vrf_name }}"
+    tenant: "{{ tenant_name }}"
+    state: present
+    hostname: "{{ inventory_hostname }}"
+    username: "{{ user }}"
+    password: "{{ pass }}"
+    use_ssl: yes
+    validate_certs: false
+
+- name: CREATE ACI TENANT BD
+  aci_bd:
+    tenant: "{{ tenant_name }}"
+    bd: "{{ bd_name }}"
+    vrf: "{{ vrf_name }}"
+    state: present
+    host: "{{ inventory_hostname }}"
+    username: "{{ user }}"
+    password: "{{ pass }}"
+    use_ssl: yes
+    validate_certs: false
+
+- name: CREATE ACI TENANT BD SUBNET
+  aci_bd_subnet:
+    tenant: "{{ tenant_name }}"
+    bd: "{{ bd_name }}"
+    gateway: "{{ gateway_ip }}"
+    mask: "{{ subnet_mask }}"
+    state: present
+    host: "{{ inventory_hostname }}"
+    username: "{{ user }}"
+    password: "{{ pass }}"
+    use_ssl: yes
+    validate_certs: false
+
+- name: CREATE ACI TENANT APP PROFILE
+  aci_ap:
+    ap: "{{ app_profile_name }}"
+    tenant: "{{ tenant_name }}"
+    state: present
+    hostname: "{{ inventory_hostname }}"
+    username: "{{ user }}"
+    password: "{{ pass }}"
+    use_ssl: yes
+    validate_certs: false
+
+- name: CREATE ACI TENANT APP PROFILE EPG
+  aci_epg:
+    epg: "{{ epg_name }}"
+    ap: "{{ app_profile_name }}"
+    tenant: "{{ tenant_name }}"
+    bd: "{{ bd_name }}"
+    state: present
+    hostname: "{{ inventory_hostname }}"
+    username: "{{ user }}"
+    password: "{{ pass }}"
+    use_ssl: yes
+    validate_certs: false
+
+- name: CREATE ACI TENANT APP PROFILE EPG DOMAIN
+    aci_epg_to_domain:
+      tenant: "{{ tenant_name }}"
+      ap: "{{ app_profile_name }}"
+      epg: "{{ epg_name }}"
+      domain: "{{domain_name}}"
+      domain_type: "{{domain_type}}"
+      state: present
+      hostname: "{{ inventory_hostname }}"
+      username: "{{ user }}"
+      password: "{{ pass }}"
+      use_ssl: yes
+      validate_certs: false

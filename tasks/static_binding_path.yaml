@@ -1,0 +1,19 @@
+---
+# tasks file for apiclab01- name Deploy Static Path binding for given EPG
+  aci_static_binding_to_epg:
+    hostname: "{{ inventory_hostname }}"
+    username: "{{ user }}"
+    password: "{{ pass }}"
+    tenant: "{{ tenant_name }}"
+    ap: "{{ app_profile_name }}"
+    epg: "{{ epg_name }}"
+    encap_id: "{{ vlan_id }}"
+    deploy_immediacy: lazy
+    interface_mode: "{{ interface_mode }}"
+    interface_type: "{{ interface_type }}"
+    pod_id: "{{ pod_id }}"
+    leafs: "{{ leaf }}"
+    interface: "{{ interface }}"
+    state: present
+    use_ssl: yes
+    validate_certs: false

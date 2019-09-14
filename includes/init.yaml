@@ -1,0 +1,4 @@
+- name: validate ansible_connection == 'local'
+  fail:
+    msg: "expected ansible_connection to be 'local', got `{{ ansible_connection }}`"
+  when: ansible_connection != 'local'

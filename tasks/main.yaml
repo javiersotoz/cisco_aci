@@ -1,0 +1,11 @@
+---
+# tasks file for cisco_aci
+#
+- name: initialize function
+  include_tasks: includes/init.yaml
+
+- name: include function specific task
+  include_tasks: "create_network_aci.yaml"
+
+- name: initialize function
+  include_tasks: "static_binding_path.yaml"

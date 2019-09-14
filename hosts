@@ -1,0 +1,3 @@
+# hosts file for Ansible playbook
+[apic]
+10.0.244.4

@@ -1,0 +1,11 @@
+---
+# vars file for apiclab01tenant_name: aciproglab12
+tenant_name: javier
+vrf_name: javier-vrf
+bd_name: javier-bd
+gateway_ip: 10.1.1.1
+subnet_mask: 24
+app_profile_name: javier-ap
+epg_name: javier-epg
+domain: Domain-for-static
+domain_type: phys
