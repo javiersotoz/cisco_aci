@@ -1,7 +1,7 @@
 cisco_aci
 =========
 
-This Ansible Network role provides a set of platform dependent fuctions that are designed to work with Cisco NX-OS network devices. The functions in this role include both configuration and fact collection.
+This Ansible Network role provides a set of platform dependent fuctions that are designed to work with Cisco ACI. The functions in this role include both configuration and fact collection.
 
 Requirements
 ------------
