@@ -13,9 +13,6 @@ domain: Domain-for-static
 domain_type: phys
 
 # vars for config static_binding_path
-tenant_name: javier
-app_profile_name: javier-ap
-epg_name: javier-epg
 vlan_id: xxxxxx
 interface_mode: xxxxxx
 pod_id: xxxxxx
