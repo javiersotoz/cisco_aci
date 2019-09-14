@@ -62,15 +62,15 @@
     validate_certs: "{{ validate_certs }}"
 
 - name: CREATE ACI TENANT APP PROFILE EPG DOMAIN
-    aci_epg_to_domain:
-      tenant: "{{ tenant_name }}"
-      ap: "{{ app_profile_name }}"
-      epg: "{{ epg_name }}"
-      domain: "{{ domain_name }}"
-      domain_type: "{{ domain_type }}"
-      state: "{{ state }}"
-      hostname: "{{ inventory_hostname }}"
-      username: "{{ user }}"
-      password: "{{ pass }}"
-      use_ssl: "{{ use_ssl }}"
-      validate_certs: "{{ validate_certs }}"
+  aci_epg_to_domain:
+    tenant: "{{ tenant_name }}"
+    ap: "{{ app_profile_name }}"
+    epg: "{{ epg_name }}"
+    domain: "{{ domain_name }}"
+    domain_type: "{{ domain_type }}"
+    state: "{{ state }}"
+    hostname: "{{ inventory_hostname }}"
+    username: "{{ user }}"
+    password: "{{ pass }}"
+    use_ssl: "{{ use_ssl }}"
+    validate_certs: "{{ validate_certs }}"
