@@ -18,3 +18,9 @@ interface_mode: xxxxxx
 pod_id: xxxxxx
 leaf: xxxxxx
 interface: xxxxxx
+
+#vars for connection
+use_ssl: yes
+validate_certs: no
+state: present
+
